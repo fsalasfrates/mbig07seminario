@@ -1,0 +1,364 @@
+<div id="'7MBIG Seminario'">&nbsp;</div>
+<h1>Seminario: ¿Por qué crece o decrece mi municipio?</h1>
+<p><br />Nombre: Francisco Salas <br />Url : <a href="https://mbig07seminario.stackblitz.io">https://mbig07seminario.stackblitz.io</a> <br />Github : <a href="https://github.com/fsalasfrates/">https://github.com/fsalasfrates/ </a></p>
+<h2>Audiencia</h2>
+<p><a href="https://imgbb.com/"><img style="float: left;" src="https://i.ibb.co/Hp6hLLg/Audiencia.jpg" alt="Audiencia" border="0" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Objetivo</h2>
+<p>El mundo de la consultor&iacute;a brinda la oportunidad de estar involucrados en muchos proyectos, la mayor&iacute;a de estos son o bien para conseguir un beneficio econ&oacute;mico por parte de lacompa&ntilde;ia cliente o para solucionar un problema actual. Tambi&eacute;n hay proyectos dedicados a un peque&ntilde;o segmento de personas o a muchas personas. Pensando en este tipo de cosas pens&eacute; en un problema actual, <strong>la Espa&ntilde;a despoblada.</strong></p>
+<p>Para ello tomando como referencia la Comunidad de Madrid se pretende mostrar como algunas pueblos tienden a decrecer mientras otros crecen &iquest;Que factores afectan a estos movimientos? que mejor manera de verlo que con un cuadro de mando.</p>
+<h2>Mensaje</h2>
+<h3>&iquest;C&oacute;mo crecen los municipios?</h3>
+<p>Siempre se piensa que un municipio con poca poblaci&oacute;n (municipio con menos de 500 habitantes) se est&aacute; despoblando, pero &iquest;Hay un decrecimiento de la poblaci&oacute;n hacia las ciudades o los n&uacute;cleos? Al investigar un poco se puede observar que no. Para ello&nbsp; lo mejor es ver dentro del mapa de la comunidad como van creciendo.&nbsp;</p>
+<p><iframe src="https://fsalasfrates.carto.com/builder/6e258652-c53e-4f2b-9af6-664765fc43bd/embed" width="70%" height="520" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p style="text-align: center;"><sub><em>Refer Carto</em></sub></p>
+<h3>¿Qué características afectan a mi municipio?</h3>
+<p>&nbsp;Al ver ese crecimiento en algunos municipios y decrecimiento en otros, lo m&aacute;s importante es determinar si existen factores que puedan marcar ese crecimiento y decrecimiento.&nbsp;</p>
+<p>Tomando como conjunto de datos los datos abiertos de la comunidad de Madrid (Detalle en Anexo I), lo primero que se debe realizar es una <strong>matriz de correlaci&oacute;n</strong> todo ello.</p>
+<p>&nbsp;</p>
+<p><a href="https://ibb.co/QNsXYXt"><img src="https://i.ibb.co/tsy3Y3F/correlacion.png" alt="correlacion" border="0" /></a></p>
+<p style="text-align: left;"><sub><em>Refer Correlac</em></sub></p>
+
+<p>Gracias a esta matriz de correlación (realizada con  <strong>Refer GoogleCollab</strong>     Ver Cap Referencias) se puede observar que hay ciertas variables que están relacionadas y  puede que  esas variables nos den  información sobre el crecimiento o incluso poder categorizarlo con procesos estadísticos y de ML  en base a estas variables, de ese modo para cualquier municipio con esas variables se podrían tomar las mismas decisiones. </p>
+
+<h3>¿Como estas caracteristicas afectan a mi municipio?</h3>
+
+<div class='tableauPlaceholder' id='viz1606522741387' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DashboardSeminario&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='DashboardSeminario&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DashboardSeminario&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1606522741387');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1677px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+<p style="text-align: left;"><sub><em>Refer Dashboard</em></sub></p>
+<ul>
+<li><strong><em>Municipios en decrecimiento</em></strong>. Se muestran los pueblos con un decrecimiento en los &uacute;ltimos 10 a&ntilde;os. Se observa que todos con menos de 500 habitantes</li>
+<li><em><strong>Municipios en crecimiento</strong></em>. Son aquellos municipios que desde 1985 ha crecido al menos el triple</li>
+<li><strong><em>Centros de salud vs poblaci&oacute;n por PIB y Renta municipal</em></strong>. Se observa que no hay relaci&oacute;n entre el PIB o la renta municipal. Pero s&iacute; se observa un crecimiento lineal entre los centros de salud y el n&uacute;mero de habitantes</li>
+<li>Se analiza la <em><strong>correlaci&oacute;n</strong> </em>entre el PIB y la renta municipal y la renta municipal y el valor catastral. Esto indica que el PIB no es determinante en el crecimiento del municipio, pero s&iacute; el valor del suelo</li>
+</ul>
+<h2>Conclusiones</h2>
+
+<p>Tomando como referencia los municipios que notablemente han decrecido comprobamos su renta municipal y su PIB, y lo comparamos con la media.</p>
+<p>Se puede comprobar que el decrecimiento se da en municipios con un PIB que est&aacute;n por encima de la media, es decir son pueblos aparentemente con riqueza. En cambio, el valor del suelo est&aacute; muy por debajo de la media.</p>
+
+<div class='tableauPlaceholder' id='viz1606581262678' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Se&#47;Seminario_16064332581260&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Seminario_16064332581260&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Se&#47;Seminario_16064332581260&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1606581262678');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+<p style="text-align: left;"><sub><em>Refer Conclusion</em></sub></p>
+
+<h2>Referencias</h2>
+<p><a href="https://fsalasfrates.carto.com/builder/6e258652-c53e-4f2b-9af6-664765fc43bd/embed"><strong>Refer Carto</strong> :Salas, F. S. F. (2020a, noviembre 8). Mapa Municipios Madrid. Francisco Salas. https://fsalasfrates.carto.com/builder/6e258652-c53e-4f2b-9af6-664765fc43bd/embed</a></p>
+<p><a href="https://colab.research.google.com/drive/1nlePZLPP18_B-xLlZa1_Ajfir9ZwAbYT?usp=sharing"><strong>Refer Correlac</strong>&lt; :Salas, F. S. F. (2020d, noviembre 27). Mapa Correlaci&oacute;n. Mapa Correlaci&oacute;n. https://colab.research.google.com/drive/1nlePZLPP18_B-xLlZa1_Ajfir9ZwAbYT?usp=sharing</a></p>
+<p><a href="https://colab.research.google.com/drive/1nlePZLPP18_B-xLlZa1_Ajfir9ZwAbYT"><strong>Refer GoogleColla</strong>b:Salas, F. S. F. (2020, 3 diciembre). Seminario Collab. https://colab.research.google.com. https://colab.research.google.com/drive/1nlePZLPP18_B-xLlZa1_Ajfir9ZwAbYT</a></p>
+
+<p><a href="https://public.tableau.com/views/DashboardSeminario/Dashboard1?:language=es&amp;:display_count=y&amp;publish=yes&amp;:origin=viz_share_link"><strong>Refer Dashboard:</strong> Salas, F. S. F. (2020b, noviembre 27). Dashboard Seminario. Dashboard Seminario. https://public.tableau.com/views/DashboardSeminario/Dashboard1?:language=es&amp;:display_count=y&amp;publish=yes&amp;:origin=viz_share_link</a></p>
+
+<p><a href="https://public.tableau.com/views/Seminario_16064332581260/Dashboard2?:language=es&amp;:retry=yes&amp;:display_count=y&amp;:origin=viz_share_link"><strong>Refer Conclusion</strong>: Salas, F. S. F. (2020b, noviembre 27). Conclusiones. Conclusiones seminario. https://public.tableau.com/views/Seminario_16064332581260/Dashboard2?:language=es&amp;:retry=yes&amp;:display_count=y&amp;:origin=viz_share_link </a></p>
+
+<h2>Anexo: Datos</h2>
+<p>La fuente de datos usada&nbsp;<em><strong>Almudena</strong></em>&nbsp;, es el banco de datos municipal y zonal de la Comunidad de Madrid.</p>
+<p>Los datos est&aacute;n en series organizadas por temas, con licencia <em>Creative Commons</em></p>
+<p>Se pretende obtener informaci&oacute;n dividida de los municipios es decir de cada tema tenemos la informaci&oacute;n de cada municipio. Esta en formato Excel y es descarga directa.</p>
+<p>Dicha informaci&oacute;n se obtiene de:</p>
+<p><em>Almudena</em>. (2020, 28 noviembre). Banco de datos Municipal. <a href="https://www.madrid.org/desvan/Inicio.icm?enlace=almudena">https://www.madrid.org/desvan/Inicio.icm?enlace=almudena</a></p>
+<p>&nbsp;</p>
+<p><br /><br /></p>
+<table style="border-color: black;" width="715">
+<tbody>
+<tr>
+<td style="width: 125px;">
+<p><strong>Campo</strong></p>
+</td>
+<td style="width: 251px;">
+<p><strong>Descripci&oacute;n</strong></p>
+</td>
+<td style="width: 77px;">
+<p><strong>Unidad</strong></p>
+</td>
+<td style="width: 234px;">
+<p><strong>Fuente</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>DistCapital</strong></p>
+</td>
+<td style="width: 251px;">
+<p>Distancia entre el municipio y la capital</p>
+</td>
+<td style="width: 77px;">
+<p>&nbsp;Km</p>
+</td>
+<td style="width: 234px;">
+<p><em>&nbsp;Instituto de Estad&iacute;stica de la Comunidad de Madrid</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>Extension</strong></p>
+</td>
+<td style="width: 251px;">
+<p>Extensi&oacute;n en kil&oacute;metros cuadrados</p>
+</td>
+<td style="width: 77px;">
+<p>&nbsp;Km<sup>2</sup></p>
+</td>
+<td style="width: 234px;">
+<p><em>Consejer&iacute;a de Medio Ambiente, Ordenaci&oacute;n del Territorio y Sostenibilidad</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>empadronado</strong></p>
+</td>
+<td style="width: 251px;">
+<p>Poblaci&oacute;n de empadronados en el municipio.</p>
+</td>
+<td style="width: 77px;">
+<p>N&uacute;mero</p>
+</td>
+<td style="width: 234px;">
+<p><em>Instituto de Estad&iacute;stica de la Comunidad de Madrid.</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>impor_pensio</strong></p>
+</td>
+<td style="width: 251px;">
+<p>Importe medio mensual por pensionista de las pensiones contributivas por municipios</p>
+</td>
+<td style="width: 77px;">
+<p>&euro;</p>
+</td>
+<td style="width: 234px;">
+<p><em>&nbsp;Registro de Prestaciones Sociales P&uacute;blicas (INSS)</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>Csalud</strong></p>
+</td>
+<td style="width: 251px;">
+<p>Centros de salud por municipio</p>
+</td>
+<td style="width: 77px;">
+<p>N&uacute;mero</p>
+</td>
+<td style="width: 234px;">
+<p><em>Servicio Madrile&ntilde;o de Salud. Consejer&iacute;a de Sanidad</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>bibliotecas</strong></p>
+</td>
+<td style="width: 251px;">
+<p>Bibliotecas p&uacute;blicas totales</p>
+</td>
+<td style="width: 77px;">
+<p>N&uacute;mero</p>
+</td>
+<td style="width: 234px;">
+<p><em>Estad&iacute;stica de Bibliotecas. Consejer&iacute;a de Cultura y Turismo</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>Bien_cult</strong></p>
+</td>
+<td style="width: 251px;">
+<p>Bienes de inter&eacute;s cultural</p>
+</td>
+<td style="width: 77px;">
+<p>N&uacute;mero</p>
+</td>
+<td style="width: 234px;">
+<p><em>&nbsp;Direcci&oacute;n General de Patrimonio Cultural. Consejer&iacute;a de Cultura y Turismo.</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>conduc</strong></p>
+</td>
+<td style="width: 251px;">
+<p>Total censo de conductores residentes</p>
+</td>
+<td style="width: 77px;">
+<p>N&uacute;mero</p>
+</td>
+<td style="width: 234px;">
+<p><em>Direcci&oacute;n General de Tr&aacute;fico. Ministerio del Interior.</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>hoteles</strong></p>
+</td>
+<td style="width: 251px;">
+<p>Total establecimientos hoteleros</p>
+</td>
+<td style="width: 77px;">
+<p>N&uacute;mero</p>
+</td>
+<td style="width: 234px;">
+<p><em>Direcci&oacute;n General de Turismo. Consejer&iacute;a de Cultura yTurismo.</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>parados</strong></p>
+</td>
+<td style="width: 251px;">
+<p>Paro registrado total</p>
+</td>
+<td style="width: 77px;">
+<p>N&uacute;mero</p>
+</td>
+<td style="width: 234px;">
+<p><em>Estad&iacute;stica de Empleo. Ministerio de Trabajo y Econom&iacute;a Social</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>Cercanias</strong></p>
+</td>
+<td style="width: 251px;">
+<p>Estaciones de trenes de cercan&iacute;as del transporte p&uacute;blico</p>
+</td>
+<td style="width: 77px;">
+<p>N&uacute;mero</p>
+</td>
+<td style="width: 234px;">
+<p><em>Consorcio Regional de Transportes de Madrid</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>PIB</strong></p>
+</td>
+<td style="width: 251px;">
+<table>
+<tbody>
+<tr>
+<td>
+<p>Producto Interior Bruto Municipal total</p>
+</td>
+<td>
+<p>&nbsp;&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td style="width: 77px;">
+<p>K&euro;&nbsp; (Miles &euro;)</p>
+</td>
+<td style="width: 234px;">
+<p><em>Estimaci&oacute;n del Producto Interior Bruto Municipal. Instituto de Estad&iacute;stica de la Comunidad de Madrid</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>colegios</strong></p>
+</td>
+<td style="width: 251px;">
+<table>
+<tbody>
+<tr>
+<td>
+<p>Centros no universitarios que imparten Educaci&oacute;n Infantil</p>
+</td>
+<td>
+<p>&nbsp;&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td style="width: 77px;">
+<p>N&uacute;mero</p>
+</td>
+<td style="width: 234px;">
+<p><em>Subdirecci&oacute;n General de Evaluaci&oacute;n y An&aacute;lisis. Consejer&iacute;a de Educaci&oacute;n y Juventud</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>rentamunicipal</strong></p>
+</td>
+<td style="width: 251px;">
+<p>Indicador de Renta Disponible Bruta Municipal total</p>
+</td>
+<td style="width: 77px;">
+<p>K&euro;&nbsp; (Miles &euro;)</p>
+</td>
+<td style="width: 234px;">
+<p><em>Indicador de Renta Disponible Bruta Municipal. Instituto de Estad&iacute;stica de la Comunidad de Madrid</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>Masvotado</strong></p>
+</td>
+<td style="width: 251px;">
+<table>
+<tbody>
+<tr>
+<td>
+<p>Se obtiene el partido m&aacute;s votado usando el porcentaje de votos de cada partido de manera local.</p>
+</td>
+<td>
+<p>&nbsp;&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td style="width: 77px;">
+<p>N/A</p>
+</td>
+<td style="width: 234px;">
+<p><em>Subdirecci&oacute;n General de Pol&iacute;tica Interior y Procesos Electorales. Ministerio del Interior</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>valorcatastral</strong></p>
+</td>
+<td style="width: 251px;">
+<p>Valor catastral por unidad urbana</p>
+</td>
+<td style="width: 77px;">
+<p>&euro;&nbsp;</p>
+</td>
+<td style="width: 234px;">
+<p><em>Catastro Inmobiliario. Direcci&oacute;n General del Catastro</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>EnergElecfactur</strong></p>
+</td>
+<td style="width: 251px;">
+<p>Energ&iacute;a el&eacute;ctrica facturada per c&aacute;pita (KW/hora)</p>
+</td>
+<td style="width: 77px;">
+<p>(KW/hora)</p>
+</td>
+<td style="width: 234px;">
+<p><em>&nbsp;I-DE Grupo Iberdrola., EDP Espa&ntilde;a y UFD Grupo Naturgy</em></p>
+</td>
+</tr>
+<tr>
+<td style="width: 125px;">
+<p><strong>edad_media</strong></p>
+<p><strong>&nbsp;</strong></p>
+</td>
+<td style="width: 251px;">
+<p>Edad media de la poblaci&oacute;n</p>
+</td>
+<td style="width: 77px;">
+<p>A&ntilde;os</p>
+</td>
+<td style="width: 234px;">
+<p><em>Instituto de Estad&iacute;stica de la Comunidad de Madrid.</em></p>
+</td>
+</tr>
+</tbody>
+</table>
